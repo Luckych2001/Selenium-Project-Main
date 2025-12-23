@@ -6,7 +6,12 @@
 ---
 
 ##  Automated Test Scenarios
+## 💻 Environment
 
+- **Operating System:** Windows 10
+- **IDE:** IntelliJ IDEA 2023.2.2
+- **Browser:** Google Chrome
+- **WebDriver:** ChromeDriver (compatible with installed Chrome version)
 ### 🛒 Add Product to Cart
 - Opens product details
 - Adds product to cart
