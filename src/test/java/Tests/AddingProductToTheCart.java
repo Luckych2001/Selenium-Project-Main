@@ -1,5 +1,4 @@
 package Tests;
-
 import Base.BaseTest;
 import Pages.CartPage;
 import Pages.ContactUsPage;
@@ -27,10 +26,12 @@ public class AddingProductToTheCart extends BaseTest {
     @Test
     public void addProductToTheCart() throws InterruptedException {
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 700);");
-        homePage.clickOnViewProductButton();
+
+        homePage.clickViewProductByIndex(1);
         productPage.clickOnAddToCardButton();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         productPage.clickOnViewCartHyperLink();
+
         Assert.assertTrue(cartPage.quantityBox.isDisplayed());
         Assert.assertTrue(cartPage.proceedToCheckoutButton.isDisplayed());
 

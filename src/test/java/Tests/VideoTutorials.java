@@ -1,5 +1,4 @@
 package Tests;
-
 import Base.BaseTest;
 import Pages.HomePage;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,8 +20,10 @@ public class VideoTutorials extends BaseTest {
     @Test
     public void openVideoTutorials() {
         homePage.clickOnVideoTutorialsNav();
+
         String expectedURL="https://www.youtube.com/c/AutomationExercise";
         String actualURL= driver.getCurrentUrl();
+
         Assert.assertEquals(actualURL,expectedURL);
     }
 }

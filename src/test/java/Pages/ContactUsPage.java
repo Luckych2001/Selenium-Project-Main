@@ -27,7 +27,7 @@ public class ContactUsPage extends BaseTest {
         emailField.sendKeys(email);
     }
     //--------------------
-    @FindBy(xpath = "/html/body/div[1]/div[3]/div[1]/div/div[3]/form/div[3]/input")
+    @FindBy(css = "input[name='subject']")
     public WebElement subjectField;
 
     public void inputSubjectField(String subject){

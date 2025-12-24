@@ -1,12 +1,8 @@
 package Pages;
-
 import Base.BaseTest;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.List;
 
 public class ProductPage extends BaseTest {
     public ProductPage(){
@@ -20,15 +16,13 @@ public class ProductPage extends BaseTest {
         addToCartButton.click();
         }
     //--------------------
-    @FindBy(xpath = "//*[@id=\"cartModal\"]/div/div/div[2]/p[2]/a")
+    @FindBy(css = "div.modal-dialog.modal-confirm div.modal-body a[href='/view_cart']")
     public WebElement viewCartHyperLink;
 
     public void clickOnViewCartHyperLink(){
         viewCartHyperLink.click();
     }
-    //--------------------
 
-
-    }
+}
 
 

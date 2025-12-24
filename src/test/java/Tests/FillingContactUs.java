@@ -1,5 +1,4 @@
 package Tests;
-
 import Base.BaseTest;
 import Pages.ContactUsPage;
 import Pages.HomePage;
@@ -26,14 +25,17 @@ public class FillingContactUs extends BaseTest {
         String email="nikolalakic43+1@gmail.com";
         String subject="Customer Review";
         String message="I'm giving you a 5 star review";
+
         homePage.clickOnContactUsNav();
         contactUsPage.inputName(name);
         contactUsPage.inputEmail(email);
         contactUsPage.inputSubjectField(subject);
         contactUsPage.inputMessage(message);
         contactUsPage.clickOnSubmitButton();
+
         Alert alert = driver.switchTo().alert();
         alert.accept();
+
         Assert.assertTrue(contactUsPage.homeButton.isDisplayed());
 
     }
